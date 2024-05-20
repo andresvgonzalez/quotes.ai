@@ -1,4 +1,3 @@
-import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import mustache from 'mustache';
@@ -18,7 +17,7 @@ const loadTemplate = (fileName: string): string => {
 const emailTemplateInStock = loadTemplate('emailTemplateInStock.mustache');
 const emailTemplateOutOfStock = loadTemplate('emailTemplateOutOfStock.mustache');
 
-export const POST = async (req: NextRequest) => {
+export const POST = async (req: Request) => {
 
   try {
     // getting email params
@@ -33,10 +32,10 @@ export const POST = async (req: NextRequest) => {
     // saving generated email
     await Email.create({ quoteId, emailContent, inStock });
     
-    return NextResponse.json({ message: 'Email saved successfully' }, { status: 200 });
+    return Response.json({ message: 'Email saved successfully' }, { status: 200 });
 
   } catch (error) {
-    return NextResponse.json({ message: 'Internal Server Error', error }, { status: 500 });
+    return Response.json({ message: 'Internal Server Error', error }, { status: 500 });
   }
 
 };

@@ -1,9 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
 import { generateQuote } from '../../../utils/quote';
 import connectToDatabase from '@/db/mongodb';
 import Quote from '@/db/models/Quote';
 
-export const POST = async (req: NextRequest) => {
+export const POST = async (req: Request) => {
   try {
     // connecting to database
     await connectToDatabase();
@@ -13,9 +12,9 @@ export const POST = async (req: NextRequest) => {
     // adding to the database
     const createdQuote = await Quote.create(quote)
 
-    return NextResponse.json(createdQuote, { status: 200 });
+    return Response.json(createdQuote, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ message: 'Internal Server Error', error }, { status: 500 });
+    return Response.json({ message: 'Internal Server Error', error }, { status: 500 });
   }
 };
 

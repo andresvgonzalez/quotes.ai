@@ -1,9 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
 import { Quote as QuoteI } from '../../../types';
 import connectToDatabase from '@/db/mongodb';
 import Quote from '@/db/models/Quote';
 
-export const POST = async (req: NextRequest) => {
+export const POST = async (req: Request) => {
   try {
     // get updated quote info
     const updatedQuote: QuoteI = await req.json();
@@ -14,10 +13,10 @@ export const POST = async (req: NextRequest) => {
       $set: updatedQuote
     });
 
-    return NextResponse.json({ message: 'Quote updated successfully' }, { status: 200 });
+    return Response.json({ message: 'Quote updated successfully' }, { status: 200 });
     
   } catch (error) {
-    return NextResponse.json({ message: 'Quote not found' }, { status: 404 });
+    return Response.json({ message: 'Quote not found' }, { status: 404 });
   }
 };
 

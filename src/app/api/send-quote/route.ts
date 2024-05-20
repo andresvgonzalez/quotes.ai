@@ -1,8 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
 import connectToDatabase from '@/db/mongodb';
 import Quote from '@/db/models/Quote';
 
-export const POST = async (req: NextRequest) => {
+export const POST = async (req: Request) => {
   try {
     const { quoteId } = await req.json();
     // connect to database
@@ -12,10 +11,10 @@ export const POST = async (req: NextRequest) => {
       $set: { "status": "sent" }
     });
 
-    return NextResponse.json({ message: 'Quote sent successfully' }, { status: 200 });
+    return Response.json({ message: 'Quote sent successfully' }, { status: 200 });
     
   } catch (error) {
-    return NextResponse.json({ message: 'Internal Server Error', error }, { status: 500 });
+    return Response.json({ message: 'Internal Server Error', error }, { status: 500 });
   }
 };
 
