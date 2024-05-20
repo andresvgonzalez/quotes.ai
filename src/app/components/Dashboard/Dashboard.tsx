@@ -29,7 +29,6 @@ const Dashboard: React.FC = () => {
   const handleSendQuote = async (quote: Quote) => {
     try {
       const { emailData, inStock } = generateEmailData(quote, relatedProducts);
-      console.log(emailData);
       await axios.post("/api/save-email", {
         quoteId: quote.id,
         emailData,

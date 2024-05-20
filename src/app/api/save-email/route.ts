@@ -31,10 +31,8 @@ export const POST = async (req: NextRequest) => {
     // connect to database
     await connectToDatabase();
     // saving generated email
-    const newEmail = await Email.create({ quoteId, emailContent, inStock });
-
-    console.log("SAED EMAIL ", newEmail)
-
+    await Email.create({ quoteId, emailContent, inStock });
+    
     return NextResponse.json({ message: 'Email saved successfully' }, { status: 200 });
 
   } catch (error) {

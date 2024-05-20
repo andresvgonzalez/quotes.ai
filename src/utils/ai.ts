@@ -34,8 +34,6 @@ export const parseEmailContent = async (
     const messageContent = choices[0].message.content;
     const rfqData: RFQData = JSON.parse(messageContent);
 
-    console.log("messageContent ", messageContent)
-
     return rfqData;
 
     return null;
