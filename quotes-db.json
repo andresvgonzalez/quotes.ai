@@ -110,5 +110,24 @@
     "dueDate": "tomorrow",
     "shippingRestrictions": "",
     "status": "draft"
+  },
+  {
+    "id": "x10xoy6lb",
+    "customer": "Sofia",
+    "products": [],
+    "outOfStockProducts": [
+      {
+        "id": 0,
+        "name": "Tesla Model X",
+        "price": 0,
+        "quantity": 0,
+        "requestedQuantity": 1,
+        "available": false
+      }
+    ],
+    "totalPrice": 0,
+    "dueDate": "",
+    "shippingRestrictions": "",
+    "status": "draft"
   }
 ]
