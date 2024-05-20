@@ -1,0 +1,28 @@
+Dear {{customer}},
+
+Here is your requested quote:
+
+{{#products}}
+- {{name}}: {{requestedQuantity}} units @ ${{price}} each | ({{quantity}} left)
+{{/products}}
+
+Total Price: ${{totalPrice}}
+
+{{#outOfStockProducts}}
+The following products are currently out of stock:
+{{#outOfStockProducts}}
+
+- {{name}}: {{requestedQuantity}} units (Out of Stock)
+{{/outOfStockProducts}}
+{{/outOfStockProducts}}
+
+{{#relatedProducts}}
+So, for the out of stock products we can suggest these options:
+
+{{relatedProducts}}
+{{/relatedProducts}}
+
+Thank you for choosing us for your needs.
+
+Best regards,
+Your Sales Team

@@ -1,0 +1,77 @@
+@import "../styles/layout/layout";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebebf5;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+
+  &.subtitle {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+p {
+  color: #777e8c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #030303;
+}
+
+p,
+span {
+  font-size: 14px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+}
+
+.col-50 {
+  flex-basis: 50%;
+}
+
+button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  cursor: pointer;
+  &.remove {
+    background-color: #f56f6f;
+    color: #fff;
+  }
+  &.primary {
+    background-color: #424242;
+    color: #fff;
+  }
+  &.secondary {
+  }
+}

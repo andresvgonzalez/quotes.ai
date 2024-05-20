@@ -1,0 +1,95 @@
+[
+  {
+    "id": "wty5truoh",
+    "customer": "Andres",
+    "products": [
+      {
+        "id": 1,
+        "name": "Apple iPhone 13",
+        "price": 799,
+        "quantity": 100,
+        "requestedQuantity": 1,
+        "available": true
+      },
+      {
+        "id": 8,
+        "name": "Amazon Echo Dot 4th Gen",
+        "price": 49,
+        "quantity": 300,
+        "requestedQuantity": 10,
+        "available": true
+      }
+    ],
+    "totalPrice": 1289,
+    "dueDate": "tomorrow",
+    "shippingRestrictions": null,
+    "status": "sent",
+    "relatedProducts": ""
+  },
+  {
+    "id": "4alayl67x",
+    "customer": "Jobsity",
+    "products": [
+      {
+        "id": 2,
+        "name": "Samsung Galaxy S21",
+        "price": 699,
+        "quantity": 150,
+        "requestedQuantity": 10,
+        "available": true
+      }
+    ],
+    "totalPrice": 6990,
+    "dueDate": "next month",
+    "shippingRestrictions": "",
+    "status": "draft"
+  },
+  {
+    "id": "n9wzlbfpv",
+    "customer": "Charly",
+    "products": [],
+    "outOfStockProducts": [
+      {
+        "id": 0,
+        "name": "Apple Pencils",
+        "price": 0,
+        "quantity": 0,
+        "requestedQuantity": 20,
+        "available": false
+      },
+      {
+        "id": 0,
+        "name": "Tesla Model X",
+        "price": 0,
+        "quantity": 0,
+        "requestedQuantity": 1,
+        "available": false
+      }
+    ],
+    "totalPrice": 1700,
+    "dueDate": "June 10th",
+    "shippingRestrictions": null,
+    "status": "draft",
+    "relatedProducts": "Galaxy Pen @ 10.00\nTesla Model Y @ $1600"
+  },
+  {
+    "id": "40o7q2vpj",
+    "customer": "Daniel",
+    "products": [],
+    "outOfStockProducts": [
+      {
+        "id": 10,
+        "name": "Sony PlayStation 5",
+        "price": 499,
+        "quantity": 40,
+        "requestedQuantity": 100,
+        "available": false
+      }
+    ],
+    "totalPrice": 16000,
+    "dueDate": "tomorrow",
+    "shippingRestrictions": "should be carefully packaged",
+    "status": "draft",
+    "relatedProducts": "Sony PlayStation 5 * 40 Units @ $400 each"
+  }
+]

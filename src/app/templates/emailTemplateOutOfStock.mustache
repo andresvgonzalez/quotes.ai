@@ -1,0 +1,25 @@
+Dear {{customer}},
+
+We regret to inform you that the following products you requested are currently out of stock:
+
+{{#outOfStockProducts}}
+  - {{name}}: {{requestedQuantity}} units (Out of Stock)
+{{/outOfStockProducts}}
+
+{{#relatedProducts.length}}
+However, we would like to offer the following related products that might meet your needs:
+
+{{#relatedProducts}}
+ - {{.}}
+{{/relatedProducts}}
+{{/relatedProducts.length}}
+
+
+{{#totalPrice}}
+And we can offer you a total price of: ${{totalPrice}} for your order
+{{/totalPrice}}
+
+Thank you for your understanding. Please let us know if there is anything else we can assist you with.
+
+Best regards,
+Your Sales Team

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Apple iPhone 13",
+    "quantity": 100,
+    "price": 799
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S21",
+    "quantity": 150,
+    "price": 699
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM4 Headphones",
+    "quantity": 200,
+    "price": 349
+  },
+  {
+    "id": 4,
+    "name": "Apple MacBook Pro 14",
+    "quantity": 50,
+    "price": 1999
+  },
+  {
+    "id": 5,
+    "name": "Dell XPS 13",
+    "quantity": 80,
+    "price": 999
+  },
+  {
+    "id": 6,
+    "name": "Bose QuietComfort 35 II",
+    "quantity": 120,
+    "price": 299
+  },
+  {
+    "id": 7,
+    "name": "Apple iPad Pro 11",
+    "quantity": 70,
+    "price": 799
+  },
+  {
+    "id": 8,
+    "name": "Amazon Echo Dot 4th Gen",
+    "quantity": 300,
+    "price": 49
+  },
+  {
+    "id": 9,
+    "name": "Google Nest Hub",
+    "quantity": 60,
+    "price": 89
+  },
+  {
+    "id": 10,
+    "name": "Sony PlayStation 5",
+    "quantity": 40,
+    "price": 499
+  }
+]

@@ -1,0 +1,25 @@
+.rfqs-page {
+  & h1 {
+    margin-bottom: 8px;
+  }
+  & textarea {
+    margin: 30px 0 10px;
+    background-color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  &__inventory {
+    margin: 20px 0 14px;
+    background: #eaeaf5;
+    padding: 30px;
+    border-radius: 8px;
+
+    & ul {
+      list-style: none;
+      margin: 20px 0 10px;
+    }
+  }
+}

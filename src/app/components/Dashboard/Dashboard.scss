@@ -1,0 +1,110 @@
+.dashboard-page {
+  &__header {
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  .row {
+    margin-bottom: 30px;
+  }
+
+  &__draft-quotes,
+  &__sent-quotes {
+    margin-bottom: 30px;
+
+    & ul {
+      background-color: #fff;
+      border-radius: 8px;
+      list-style: none;
+      margin-top: 10px;
+      overflow-y: scroll;
+
+      & li {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 1px solid #f5f5f5;
+
+        & span:nth-child(even) {
+          color: #777e8c;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &__buttons {
+      margin-left: 20px;
+
+      & button {
+        margin: 0 4px;
+      }
+    }
+  }
+
+  &__editing-quote {
+    background: #eaeaf5;
+    border-radius: 8px;
+    padding: 24px;
+    display: table;
+    margin-bottom: 30px;
+
+    & h2 {
+      margin-bottom: 20px;
+    }
+
+    & p,
+    & input,
+    & textarea {
+      margin-bottom: 10px;
+    }
+
+    & ul {
+      list-style: none;
+      margin-bottom: 20px;
+
+      & li > p {
+        margin-bottom: 5px;
+      }
+    }
+
+    & label {
+      & span {
+        display: block;
+      }
+    }
+
+    & input,
+    & textarea {
+      background-color: #fff;
+      border: none;
+      padding: 8px;
+      border-radius: 8px;
+      margin: 8px 0 10px;
+      width: 100%;
+    }
+
+    & button {
+      margin-right: 10px;
+    }
+  }
+
+  &__quote-email {
+    background: #eaeaf5;
+    border-radius: 8px;
+    padding: 24px;
+    display: table;
+    margin-bottom: 30px;
+
+    & pre {
+      margin: 27px 0;
+      background: #e1e1eb;
+      padding: 20px;
+      border-radius: 6px;
+      color: #4d5056;
+    }
+  }
+}
