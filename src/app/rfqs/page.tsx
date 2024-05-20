@@ -67,7 +67,7 @@ const SubmitRFQ: React.FC = () => {
     <div className="rfqs-page">
       <h1>Submit RFQ</h1>
       <p>
-        Parse any RFQ email with our revolutionary AI technology base on GPT-4
+        Parse any RFQ email with our revolutionary AI technology based on GPT-4
         in order to create a quote for your customers
       </p>
       <form
