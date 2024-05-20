@@ -91,5 +91,24 @@
     "shippingRestrictions": "should be carefully packaged",
     "status": "draft",
     "relatedProducts": "Sony PlayStation 5 * 40 Units @ $400 each"
+  },
+  {
+    "id": "d3mjfvzs3",
+    "customer": "Donald",
+    "products": [
+      {
+        "id": 1,
+        "name": "Apple iPhone 13",
+        "price": 799,
+        "quantity": 100,
+        "requestedQuantity": 14,
+        "available": true
+      }
+    ],
+    "outOfStockProducts": [],
+    "totalPrice": 11186,
+    "dueDate": "tomorrow",
+    "shippingRestrictions": "",
+    "status": "draft"
   }
 ]

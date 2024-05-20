@@ -30,3 +30,13 @@ export interface Quote {
   status: 'draft' | 'sent';
   dueDate?: string;
 }
+
+export interface RFQData {
+  customer: string;
+  products: {
+    name: string;
+    quantity: number;
+  }[];
+  dueDate?: string;
+  shippingRestrictions?: string;
+}
