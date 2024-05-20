@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getQuotesFromFile } from '../../../utils/storage';
+import Quote from '@/db/models/Quote';
+import connectToDatabase from '@/db/mongodb';
 
 export const GET = async (req: NextRequest) => {
-  const quotes = getQuotesFromFile();
-  return NextResponse.json(quotes, { status: 200 });
+  try {
+    // connecting to database
+    await connectToDatabase();
+    const quotes = await Quote.find();
+    return NextResponse.json(quotes, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: 'Internal Server Error', error }, { status: 500 });
+  }
 };

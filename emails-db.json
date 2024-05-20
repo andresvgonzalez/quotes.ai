@@ -100,5 +100,15 @@
     "quoteId": "wty5truoh",
     "emailContent": "Dear Andres,\n\nHere is your requested quote:\n\n- Apple iPhone 13: 100 units @ $799 each | (100 left)\n- Amazon Echo Dot 4th Gen: 300 units @ $49 each | (300 left)\n\nTotal Price: $1289\n\n\n\nThank you for choosing us for your needs.\n\nBest regards,\nYour Sales Team\n",
     "inStock": true
+  },
+  {
+    "quoteId": "xzr8sp9ig",
+    "emailContent": "Dear Andres,\n\nHere is your requested quote:\n\n- Apple iPhone 13: 100 units @ $799 each | (100 left)\n\nTotal Price: $7991\n\n\nSo, for the out of stock products we can suggest these options:\n\ntesting\n\nThank you for choosing us for your needs.\n\nBest regards,\nYour Sales Team\n",
+    "inStock": true
+  },
+  {
+    "quoteId": "xzr8sp9ig",
+    "emailContent": "Dear Andres,\n\nHere is your requested quote:\n\n- Apple iPhone 13: 100 units @ $799 each | (100 left)\n\nTotal Price: $7991\n\n\nSo, for the out of stock products we can suggest these options:\n\ntesting\n\nThank you for choosing us for your needs.\n\nBest regards,\nYour Sales Team\n",
+    "inStock": true
   }
 ]

@@ -15,6 +15,7 @@ This application uses AI to automate the process of turning customer emailed req
 - **Next.js 14**
 - **TypeScript**
 - **Mustache.js** for email templating
+- **Mongoose** as driver to handle database operations
 - **Fuse.js** for product finding using
 - **OpenAI GPT-4** for email parsing
 
@@ -27,6 +28,8 @@ app/
       route.ts
     save-email/
       route.ts
+    generate-quote/
+      route.ts
     get-email/
       [quoteId]/
         route.ts
@@ -37,6 +40,8 @@ app/
     remove-quote/
       route.ts
     parse-email/
+      route.ts
+    quotes/
       route.ts
   components/
     Dashboard/
@@ -54,9 +59,13 @@ app/
     page.tsx
   submit-rfq/
     page.tsx
+db/
+  mongodb.ts
+  models/
+    Email.ts
+    Quote.ts
 utils/
   types.ts
-  storage.ts
 templates/
   emailTemplateInStock.mustache
   emailTemplateOutOfStock.mustache
@@ -84,8 +93,10 @@ inventory.json
    yarn install
    ```
 
-3. Create local env file with OpenAI API Key:
-   ```echo OPENAI_API_KEY=sk-proj-XPL5egBORIoAmV0e0XITT3BlbkFJvz5H1LD9h5fuDpMdJlEf > .env.local
+3. Create local env file with Mongo and OpenAI API Keys by running:
+   ```
+   echo OPENAI_API_KEY=sk-proj-XPL5egBORIoAmV0e0XITT3BlbkFJvz5H1LD9h5fuDpMdJlEf > .env.local
+   echo MONGODB_URI=mongodb+srv://quotes-ai-user:quotes-ai-password@herolabs.wbyoybc.mongodb.net/quotes-ai?retryWrites=true&w=majority > .env.local
    ```
 
 4. Run the development server:

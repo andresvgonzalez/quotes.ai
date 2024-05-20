@@ -1,17 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getQuotesFromFile, saveQuotesToFile } from '../../../utils/storage';
-import { Quote } from '../../../types';
+import { Quote as QuoteI } from '../../../types';
+import connectToDatabase from '@/db/mongodb';
+import Quote from '@/db/models/Quote';
 
 export const POST = async (req: NextRequest) => {
-  const updatedQuote: Quote = await req.json();
-  const quotes = getQuotesFromFile();
+  try {
+    // get updated quote info
+    const updatedQuote: QuoteI = await req.json();
+    // connect to database
+    await connectToDatabase();
+    // update document
+    await Quote.updateOne({ id: updatedQuote.id }, {
+      $set: updatedQuote
+    });
 
-  const quoteIndex = quotes.findIndex((quote) => quote.id === updatedQuote.id);
-  if (quoteIndex !== -1) {
-    quotes[quoteIndex] = updatedQuote;
-    saveQuotesToFile(quotes);
     return NextResponse.json({ message: 'Quote updated successfully' }, { status: 200 });
-  } else {
+    
+  } catch (error) {
     return NextResponse.json({ message: 'Quote not found' }, { status: 404 });
   }
 };
