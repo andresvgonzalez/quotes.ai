@@ -22,3 +22,5 @@ export const GET = async (req: NextRequest, context: { params: { quoteId: string
     return NextResponse.json({ message: 'Internal Server Error', error }, { status: 500 });
   }
 };
+
+export const revalidate = 10;

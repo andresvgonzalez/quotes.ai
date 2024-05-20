@@ -20,3 +20,5 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json({ message: 'Quote not found' }, { status: 404 });
   }
 };
+
+export const revalidate = 0;

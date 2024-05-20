@@ -15,3 +15,5 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json({ message: 'Internal Server Error', error }, { status: 500 });
   }
 };
+
+export const revalidate = 0;
