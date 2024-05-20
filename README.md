@@ -15,6 +15,7 @@ This application uses AI to automate the process of turning customer emailed req
 - **Next.js 14**
 - **TypeScript**
 - **Mustache.js** for email templating
+- **Fuse.js** for product finding using
 - **OpenAI GPT-4** for email parsing
 
 ## Project Structure
@@ -83,14 +84,18 @@ inventory.json
    yarn install
    ```
 
-3. Run the development server:
+3. Create local env file with OpenAI API Key:
+   ```echo OPENAI_API_KEY=sk-proj-XPL5egBORIoAmV0e0XITT3BlbkFJvz5H1LD9h5fuDpMdJlEf > .env.local
+   ```
+
+4. Run the development server:
    ```sh
    npm run dev
    # or
    yarn dev
    ```
 
-4. Open your browser and navigate to:
+5. Open your browser and navigate to:
    ```
    http://localhost:3000
    ```
@@ -105,7 +110,7 @@ inventory.json
 
 ### Submit RFQs
 
-- Access the RFQ submission page at `/submit-rfq`.
+- Access the RFQ submission page at `/rfqs`.
 - Enter email content and submit it for parsing.
 
 ### Inventory

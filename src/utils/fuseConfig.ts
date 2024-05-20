@@ -10,7 +10,7 @@ const fuseOptions: IFuseOptions<Product> = {
   ],
   threshold: 0.4, // Lower threshold for more precise matches
   distance: 100, // Distance for approximate matches
-  minMatchCharLength: 10, // Minimum number of characters that must match
+  minMatchCharLength: 6, // Minimum number of characters that must match
 };
 
 export default fuseOptions;
