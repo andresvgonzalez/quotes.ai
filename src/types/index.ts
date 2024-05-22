@@ -3,11 +3,15 @@ export interface Product {
   name: string;
   quantity: number;
   price: number;
+  dimensions: string;
+  materialSpecifications: string;
 }
 
 export interface RequestedProduct {
   name: string;
   quantity: number;
+  dimensions: string;
+  materialSpecifications: string;
 }
 
 export interface InventoryStatus {
@@ -17,6 +21,9 @@ export interface InventoryStatus {
   quantity: number;
   requestedQuantity: number;
   available: boolean;
+  dimensions: string;
+  requestedDimensions?: string;
+  materialSpecifications: string;
 }
 
 export interface Quote {
@@ -36,6 +43,7 @@ export interface RFQData {
   products: {
     name: string;
     quantity: number;
+    dimensions: string;
   }[];
   dueDate?: string;
   shippingRestrictions?: string;

@@ -1,62 +1,82 @@
 [
   {
     "id": 1,
-    "name": "Apple iPhone 13",
-    "quantity": 100,
-    "price": 799
+    "name": "Steel Beam A36",
+    "quantity": 50,
+    "price": 150,
+    "dimensions": "200x100x10 mm",
+    "materialSpecifications": "A36 Steel"
   },
   {
     "id": 2,
-    "name": "Samsung Galaxy S21",
-    "quantity": 150,
-    "price": 699
+    "name": "Aluminum Sheet 6061-T6",
+    "quantity": 200,
+    "price": 75,
+    "dimensions": "1000x500x5 mm",
+    "materialSpecifications": "6061-T6 Aluminum"
   },
   {
     "id": 3,
-    "name": "Sony WH-1000XM4 Headphones",
-    "quantity": 200,
-    "price": 349
+    "name": "Stainless Steel Pipe 304",
+    "quantity": 100,
+    "price": 100,
+    "dimensions": "100x2 mm",
+    "materialSpecifications": "304 Stainless Steel"
   },
   {
     "id": 4,
-    "name": "Apple MacBook Pro 14",
-    "quantity": 50,
-    "price": 1999
+    "name": "Copper Wire C11000",
+    "quantity": 500,
+    "price": 10,
+    "dimensions": "2 mm",
+    "materialSpecifications": "C11000 Copper"
   },
   {
     "id": 5,
-    "name": "Dell XPS 13",
-    "quantity": 80,
-    "price": 999
+    "name": "Brass Rod C36000",
+    "quantity": 150,
+    "price": 200,
+    "dimensions": "50x1000 mm",
+    "materialSpecifications": "C36000 Brass"
   },
   {
     "id": 6,
-    "name": "Bose QuietComfort 35 II",
-    "quantity": 120,
-    "price": 299
+    "name": "Galvanized Steel Sheet G90",
+    "quantity": 300,
+    "price": 90,
+    "dimensions": "1200x600x3 mm",
+    "materialSpecifications": "G90 Galvanized Steel"
   },
   {
     "id": 7,
-    "name": "Apple iPad Pro 11",
-    "quantity": 70,
-    "price": 799
+    "name": "Titanium Plate Grade 5",
+    "quantity": 50,
+    "price": 300,
+    "dimensions": "500x500x10 mm",
+    "materialSpecifications": "Grade 5 Titanium"
   },
   {
     "id": 8,
-    "name": "Amazon Echo Dot 4th Gen",
-    "quantity": 300,
-    "price": 49
+    "name": "Carbon Steel Tube A53",
+    "quantity": 400,
+    "price": 50,
+    "dimensions": "50x5 mm",
+    "materialSpecifications": "A53 Carbon Steel"
   },
   {
     "id": 9,
-    "name": "Google Nest Hub",
-    "quantity": 60,
-    "price": 89
+    "name": "Nickel Alloy Bar Nickel 200",
+    "quantity": 80,
+    "price": 250,
+    "dimensions": "25x1000 mm",
+    "materialSpecifications": "Nickel 200"
   },
   {
     "id": 10,
-    "name": "Sony PlayStation 5",
-    "quantity": 40,
-    "price": 499
+    "name": "Lead Sheet Pure Lead",
+    "quantity": 100,
+    "price": 120,
+    "dimensions": "1000x1000x5 mm",
+    "materialSpecifications": "Pure Lead"
   }
 ]

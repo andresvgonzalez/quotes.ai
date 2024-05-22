@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Inventory.scss";
 import { Product } from "../../../types";
+import "./Inventory.scss";
 
 const Inventory: React.FC = () => {
   const [inventory, setInventory] = useState<Product[]>([]);
@@ -30,6 +30,8 @@ const Inventory: React.FC = () => {
           <thead>
             <tr>
               <th>Product Name</th>
+              <th>Material Specifications</th>
+              <th>Dimensions</th>
               <th>Quantity</th>
               <th>Price</th>
             </tr>
@@ -38,6 +40,8 @@ const Inventory: React.FC = () => {
             {inventory.map((product) => (
               <tr key={product.id}>
                 <td>{product.name}</td>
+                <td>{product.materialSpecifications}</td>
+                <td>{product.dimensions}</td>
                 <td>{product.quantity}</td>
                 <td>${product.price}</td>
               </tr>

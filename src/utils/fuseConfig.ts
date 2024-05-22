@@ -5,12 +5,21 @@ const fuseOptions: IFuseOptions<Product> = {
   keys: [
     {
       name: 'name',
-      weight: 0.7,
+      weight: 0.5,
+    },
+    {
+      name: 'dimensions',
+      weight: 0.3,
+    },
+    {
+      name: 'materialSpecifications',
+      weight: 0.2,
     },
   ],
-  threshold: 0.4, // Lower threshold for more precise matches
-  distance: 100, // Distance for approximate matches
-  minMatchCharLength: 6, // Minimum number of characters that must match
+  threshold: 0.3, // Lower threshold for more precise matches
+  distance: 50, // Decreased distance for more accurate matches
+  minMatchCharLength: 3, // Reduced minimum match length for more flexibility
 };
+
 
 export default fuseOptions;

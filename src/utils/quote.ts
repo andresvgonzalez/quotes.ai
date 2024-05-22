@@ -13,7 +13,7 @@ export const generateQuote = (rfqData: Quote, inventoryStatus: InventoryStatus[]
 
   return {
     id: generateUniqueId(),
-    customer: rfqData.customer,
+    customer: rfqData.customer || "Not specified",
     products: availableProducts,
     outOfStockProducts,
     totalPrice,

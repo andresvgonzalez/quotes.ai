@@ -14,7 +14,7 @@ export const parseEmailContent = async (
       messages: [
         {
           role: 'system',
-          content: 'You are an assistant that extracts structured RFQ data from emails. Always respond in the following JSON format: { "customer": "Customer Name", "products": [ { "name": "Product Name", "quantity": X } ], "dueDate": "Due Date", "shippingRestrictions": "Shipping Restrictions" }',
+          content: 'You are an assistant that extracts structured RFQ data from emails. For the detected Due Date, return a valid Date Object for the current year. Always respond in the following JSON format: { "customer": "Customer Name", "products": [ { "name": "Product Name", "quantity": X, dimensions: X, materialSpecifications: X } ], "dueDate": "Due Date", "shippingRestrictions": "Shipping Restrictions" }',
         },
         {
           role: 'user',
@@ -35,8 +35,6 @@ export const parseEmailContent = async (
     const rfqData: RFQData = JSON.parse(messageContent);
 
     return rfqData;
-
-    return null;
   } catch (error: any) {
     console.error(
       "Error calling OpenAI API:",

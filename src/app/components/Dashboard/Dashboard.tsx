@@ -26,6 +26,14 @@ const Dashboard: React.FC = () => {
     fetchQuotes();
   }, []);
 
+  const resetForms = () => {
+    setEditingQuote(null);
+    setNewPrice(null);
+    setCustomerName("");
+    setRelatedProducts("");
+    setSelectedEmail(null);
+  };
+
   const handleSendQuote = async (quote: Quote) => {
     try {
       const { emailData, inStock } = generateEmailData(quote, relatedProducts);
@@ -66,10 +74,7 @@ const Dashboard: React.FC = () => {
             quote.id === editingQuote.id ? updatedQuote : quote
           )
         );
-        setEditingQuote(null);
-        setNewPrice(null);
-        setCustomerName("");
-        setRelatedProducts("");
+        resetForms();
         alert("Quote updated successfully!");
       } catch (error) {
         console.error("Error updating quote:", error);
@@ -83,11 +88,7 @@ const Dashboard: React.FC = () => {
       const updatedQuotes = quotes.filter((quote) => quote.id !== quoteId);
       setQuotes(updatedQuotes);
       alert("Quote removed successfully!");
-      setEditingQuote(null);
-      setNewPrice(null);
-      setCustomerName("");
-      setRelatedProducts("");
-      setSelectedEmail(null);
+      resetForms();
     } catch (error) {
       console.error("Error removing quote:", error);
     }
@@ -123,7 +124,10 @@ const Dashboard: React.FC = () => {
             price: 0,
             quantity: 0,
             requestedQuantity: requestedProduct.quantity,
+            requestedDimensions: requestedProduct.requestedDimensions,
             available: false,
+            materialSpecifications: requestedProduct.materialSpecifications,
+            dimensions: requestedProduct.dimensions,
           };
         }
       }

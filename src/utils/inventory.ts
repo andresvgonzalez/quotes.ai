@@ -10,6 +10,7 @@ export const checkInventory = (requestedProducts: RequestedProduct[]): Inventory
   return requestedProducts.map((requestedProduct) => {
     // Perform fuzzy search
     const result = fuse.search(requestedProduct.name);
+    // get the best match
     const bestMatch = result.length > 0 ? result[0].item : null;
 
     return {
@@ -18,7 +19,10 @@ export const checkInventory = (requestedProducts: RequestedProduct[]): Inventory
       price: bestMatch?.price || 0,
       quantity: bestMatch?.quantity || 0,
       requestedQuantity: requestedProduct.quantity,
+      requestedDimensions: requestedProduct.dimensions,
       available: bestMatch ? bestMatch.quantity >= requestedProduct.quantity : false,
+      materialSpecifications: bestMatch ? bestMatch.materialSpecifications : requestedProduct.materialSpecifications,
+      dimensions: bestMatch ? bestMatch.dimensions : ""
     };
   });
 };

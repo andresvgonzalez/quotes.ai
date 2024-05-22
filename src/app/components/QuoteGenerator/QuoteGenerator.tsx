@@ -30,7 +30,7 @@ const QuoteGenerator: React.FC<QuoteGeneratorProps> = ({
 
     const quote: Quote = {
       id: generateUniqueId(),
-      customer: rfqData.customer,
+      customer: rfqData.customer || "Not specified",
       products: availableProducts,
       totalPrice,
       dueDate: rfqData.dueDate,
